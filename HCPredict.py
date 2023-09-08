@@ -3,7 +3,7 @@ import pandas as pd
 import pickle
 import requests
 import sklearn
-from PIL import Image
+# from PIL import Image
 
 st.title('2021 Myanmar Regional Poverty Headcount Prediction & Analysis')
 uploaded_file = st.file_uploader('Upload a CSV file', type=['csv'])
@@ -32,23 +32,23 @@ if uploaded_file is not None:
         st.error("Error: Predictions and True Values have mismatched lengths or are empty.")
     st.header("Why are Patterns not accurate?")
     
-    image = Image.open('Unknown.png')
-    st.image(image, caption='Testing Data\'s Correlation Heatmap')  
-    image_paths = ['Unknown-2.png','Unknown-3.png','Unknown-4.png']
-    for i in image_paths:
-        st.image(i, width=500, caption='Scatter Plots')
-    st.write('These Heatmap and Scatter Plots reveal our dataset comes with certain data quality challenges. These may include outliers, inconsistencies, noises, etc,.')
+    # image = Image.open('Unknown.png')
+    # st.image(image, caption='Testing Data\'s Correlation Heatmap')  
+    # image_paths = ['Unknown-2.png','Unknown-3.png','Unknown-4.png']
+    # for i in image_paths:
+    #     st.image(i, width=500, caption='Scatter Plots')
+    # st.write('These Heatmap and Scatter Plots reveal our dataset comes with certain data quality challenges. These may include outliers, inconsistencies, noises, etc,.')
     
-    image7 = Image.open('Unknown-7.png')    
-    st.image(image7, caption='Feature Importances Visualization for Training Data') 
-    image8 = Image.open('Unknown-8.png')    
-    st.image(image8, caption='Feature Importances Visualization for Testing Data') 
-    st.write('Also, Machine Learning Models also had different important features which lead to generate inaccurate patterns.')
+    # image7 = Image.open('Unknown-7.png')    
+    # st.image(image7, caption='Feature Importances Visualization for Training Data') 
+    # image8 = Image.open('Unknown-8.png')    
+    # st.image(image8, caption='Feature Importances Visualization for Testing Data') 
+    # st.write('Also, Machine Learning Models also had different important features which lead to generate inaccurate patterns.')
 
-    image9 = Image.open('Unknown-9.png')    
-    st.image(image9, caption='weights (coefficients)') 
-    image10 = Image.open('Unknown-10.png')    
-    st.image(image10, caption='Intercept') 
+    # image9 = Image.open('Unknown-9.png')    
+    # st.image(image9, caption='weights (coefficients)') 
+    # image10 = Image.open('Unknown-10.png')    
+    # st.image(image10, caption='Intercept') 
     st.write('These coefficients and intercept describe relationship between features and label.')
 
     st.header('Overall, due to limitations, prediction patterns didn\'t cope with true values due to irregularities and lack of cleanliness in data, which in turn lead to influencing features and incorrect weights.')
